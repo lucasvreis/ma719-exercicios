@@ -1,0 +1,13 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\subsection*{9.2.11}
+\begin{enumerate}[(a)]
+    \item Claro que $0\in V_\lambda$, e se $a,b\in V_\lambda$, então $T(a+\gamma b)=T(a)+\gamma T(b)=\lambda(T)a+\gamma\lambda(T)b=\lambda(T)(a+\gamma b)$ para toda $T\in\mathcal{T}$. Agora, seja $V_\lambda'=\{v\in V:T(v)=\lambda(T)v,\;\forall\;T\in\T\}$. Claro que $V'_\lambda\subset V_\lambda$. Se $v\in V_\lambda$, então para toda $Q=\sum_i x_iT_i$ com $T_i\in\mathcal{T}$,
+          \[Q(v)=\sum_i x_iT_i(v)=\sum_ix_i\lambda(T_i)v=\lambda\left(\sum_ix_iT_i\right)v=\lambda(Q)v.\]
+    \item Suponha que $\lambda,\lambda'\in\T^*$ com $\lambda\neq\lambda'$. Seja $v\in V_\lambda\cap V_{\lambda'}$. Então existe ao menos um $T\in\T$ tal que $\lambda(T)\neq\lambda'(T)$. Mas pelo item (a) sabemos que $T(v)=\lambda'(T)v=\lambda(T)v$, logo $v=0$.
+    \item Seja $\{\tau_i\}_{i\in\I}$ a referida base de $\T$, e note que a questão é equivalente a existir uma base $\nu=\{v_j\}_{j\in\J}$ de $V$ em que os elementos de $\tau$ são simultaneamente diagonais: se isso é verdade, para cada $j\in\J$,  seja $\lambda_j\in\T^*$ o funcional definido por $\lambda_j(\tau_i)=([\tau_i]_\nu^\nu)_{j,j}$. Assim, $v_j\in V_{\lambda_j}$, e como $\{v_j\}_{j\in\J}$ é base, fica claro que $V=\bigoplus_{j\in\J}V_{\lambda_j}$. Por outro lado, se $V=\bigoplus_{\lambda\in\T^*}V_\lambda$, tomando $\alpha_j$ base de $V_{\lambda_j}$ para todo $j\in\J$ a família $\nu=\bigcup_{j\in\J}\alpha_j$ é uma base de $V$ com $[\tau_i]_\nu^\nu$ diagonal para todo $i\in\J$.
+    
+    Agora, precisamos mostrar que $\{v_j\}_{j\in\J}$ existe. Fixando $i\in\I$, seja $\omega=\{w_j\}_{j\in\J}$ base de $V$ que diagonaliza $\tau_i$ e para cada $j\in\J$ defina $a_j=([\tau_i]_\omega^\omega)_{j,j}$. Como da primeira hipótese temos $\tau_{i'}\tau_i=\tau_i\tau_{i'}$ para todo $i'\in\I$ (estão no subespaço gerado por $\mathcal{T}$), vale $\tau_i(\tau_{i'}w_j)=\tau_{i'}\tau_iw_j=a_j(\tau_{i'}w_j)$, ou seja, o subespaço $\Ker(\tau_i-a_j\id)$ é invariante por $\tau_{i'}$.
+\end{enumerate}
+\end{document}

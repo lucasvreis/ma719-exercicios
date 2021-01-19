@@ -1,0 +1,12 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+    \subsection*{9.2.5}
+    Seja $W=\F^m$ e considere \(T\in\Hom_\F(V,W)\) dado por $T(v)=\sum_{i=1}^m f_i(v)e_i$, onde \(\{e_i\}_{i=1}^m\) é a base canônica de $W$. Suponha por contradição que $T$ não é sobrejetora, de forma que poderíamos escrever $W=U\oplus T(V)$ onde $U\neq\{0\}$. Seja $g\in W^*$ o funcional linear definido por $g(u)=1$ para todo $u$ em uma base $\{u_i\}_{i\in I}$ de $U$ e $g(w)=0$ se $w\in T(V)$, ou seja, $g\neq 0$ e $g\circ T =0$. Então:
+    \begin{align*}
+        (g\circ T) (v) &= g\left(\sum_{i=1}^m f_i(v)e_i\right)\\
+        &= \sum_{i=1}^m g(e_i)f_i(v)\\
+        \implies g\circ T &= \sum_{i=1}^m g(e_i)f_i = 0
+    \end{align*}
+    Mas como \(\{e_i\}_{i=1}^m\) é base de $W$, $g(e_i)\neq 0$ para algum $i$; ou seja, um dos coeficientes da última combinação linear é diferente de zero, contradizendo a hipótese que $\{f_i\}_{i=1}^m$ é l.i.. Portanto, $T$ é sobrejetora e basta, para cada $1\leq j\leq m$, escolher $v$ tal que $T(v)=e_j$.
+\end{document}
